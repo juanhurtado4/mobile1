@@ -92,6 +92,24 @@ print("The course is a mobile course: \(isMobile)")
  2. Write a function called `getWeekdayName` that takes a `Weekday` returns the name of each weekday as a `String`, e.g.: `"This weekday is called Sunday."`
  3. Write a function called `isItFinallyWeekend` that takes a `Weekday` and returns a `String` indicating whether the argument is a weekend weekday, e.g.: `"Monday is a regular workday."` or `"Wuhuuuu, it's SATURDAYYYYYYYY."`
  */
+// Challenge 1
 
+enum Weekday {
+    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
 
+// Challenge 2
+func getWeekdayName(day: Weekday) -> String {
+    return "This weekday is called \(day)"
+}
 
+// Challenge 3
+func isItFinallyWeekend(day: Weekday) -> String {
+    switch day {
+    case .Saturday, .Sunday:
+        return "Wuhuuuu, it's \(day)yyyyyyyy"
+    default:
+        return "\(day) is a regular workday"
+    
+    }
+}

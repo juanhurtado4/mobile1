@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  mood_tracker
 //
-//  Created by juan hurtado on 9/29/17.
-//  Copyright © 2017 projects. All rights reserved.
+//  Created by juan hurtado on 10/3/17.
+//  Copyright © 2017 Make School. All rights reserved.
 //
 
 import UIKit

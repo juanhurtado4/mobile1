@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1981D1A1F7EEEF500644CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1981D191F7EEEF500644CDA /* AppDelegate.swift */; };
-		D1981D1C1F7EEEF500644CDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1981D1B1F7EEEF500644CDA /* ViewController.swift */; };
-		D1981D1F1F7EEEF500644CDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1981D1D1F7EEEF500644CDA /* Main.storyboard */; };
-		D1981D211F7EEEF500644CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1981D201F7EEEF500644CDA /* Assets.xcassets */; };
-		D1981D241F7EEEF500644CDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1981D221F7EEEF500644CDA /* LaunchScreen.storyboard */; };
-		D1981D2C1F7EFA0900644CDA /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1981D2B1F7EFA0900644CDA /* FriendsTableViewController.swift */; };
-		D1981D2E1F7EFB4300644CDA /* MoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1981D2D1F7EFB4300644CDA /* MoodTableViewController.swift */; };
+		D1A55F4D1F8435230090F856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A55F4C1F8435230090F856 /* AppDelegate.swift */; };
+		D1A55F4F1F8435230090F856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A55F4E1F8435230090F856 /* ViewController.swift */; };
+		D1A55F521F8435230090F856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A55F501F8435230090F856 /* Main.storyboard */; };
+		D1A55F541F8435240090F856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A55F531F8435240090F856 /* Assets.xcassets */; };
+		D1A55F571F8435240090F856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A55F551F8435240090F856 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D1981D161F7EEEF500644CDA /* mood_tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mood_tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1981D191F7EEEF500644CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1981D1B1F7EEEF500644CDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D1981D1E1F7EEEF500644CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D1981D201F7EEEF500644CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D1981D231F7EEEF500644CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D1981D251F7EEEF500644CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1981D2B1F7EFA0900644CDA /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
-		D1981D2D1F7EFB4300644CDA /* MoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewController.swift; sourceTree = "<group>"; };
+		D1A55F491F8435230090F856 /* mood_tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mood_tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A55F4C1F8435230090F856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1A55F4E1F8435230090F856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A55F511F8435230090F856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1A55F531F8435240090F856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1A55F561F8435240090F856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1A55F581F8435240090F856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D1981D131F7EEEF500644CDA /* Frameworks */ = {
+		D1A55F461F8435230090F856 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D1981D0D1F7EEEF500644CDA = {
+		D1A55F401F8435230090F856 = {
 			isa = PBXGroup;
 			children = (
-				D1981D181F7EEEF500644CDA /* mood_tracker */,
-				D1981D171F7EEEF500644CDA /* Products */,
+				D1A55F4B1F8435230090F856 /* mood_tracker */,
+				D1A55F4A1F8435230090F856 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D1981D171F7EEEF500644CDA /* Products */ = {
+		D1A55F4A1F8435230090F856 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1981D161F7EEEF500644CDA /* mood_tracker.app */,
+				D1A55F491F8435230090F856 /* mood_tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D1981D181F7EEEF500644CDA /* mood_tracker */ = {
+		D1A55F4B1F8435230090F856 /* mood_tracker */ = {
 			isa = PBXGroup;
 			children = (
-				D1981D191F7EEEF500644CDA /* AppDelegate.swift */,
-				D1981D1B1F7EEEF500644CDA /* ViewController.swift */,
-				D1981D1D1F7EEEF500644CDA /* Main.storyboard */,
-				D1981D2D1F7EFB4300644CDA /* MoodTableViewController.swift */,
-				D1981D2B1F7EFA0900644CDA /* FriendsTableViewController.swift */,
-				D1981D201F7EEEF500644CDA /* Assets.xcassets */,
-				D1981D221F7EEEF500644CDA /* LaunchScreen.storyboard */,
-				D1981D251F7EEEF500644CDA /* Info.plist */,
+				D1A55F4C1F8435230090F856 /* AppDelegate.swift */,
+				D1A55F4E1F8435230090F856 /* ViewController.swift */,
+				D1A55F501F8435230090F856 /* Main.storyboard */,
+				D1A55F531F8435240090F856 /* Assets.xcassets */,
+				D1A55F551F8435240090F856 /* LaunchScreen.storyboard */,
+				D1A55F581F8435240090F856 /* Info.plist */,
 			);
 			path = mood_tracker;
 			sourceTree = "<group>";
@@ -73,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D1981D151F7EEEF500644CDA /* mood_tracker */ = {
+		D1A55F481F8435230090F856 /* mood_tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1981D281F7EEEF500644CDA /* Build configuration list for PBXNativeTarget "mood_tracker" */;
+			buildConfigurationList = D1A55F5B1F8435240090F856 /* Build configuration list for PBXNativeTarget "mood_tracker" */;
 			buildPhases = (
-				D1981D121F7EEEF500644CDA /* Sources */,
-				D1981D131F7EEEF500644CDA /* Frameworks */,
-				D1981D141F7EEEF500644CDA /* Resources */,
+				D1A55F451F8435230090F856 /* Sources */,
+				D1A55F461F8435230090F856 /* Frameworks */,
+				D1A55F471F8435230090F856 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,26 +81,26 @@
 			);
 			name = mood_tracker;
 			productName = mood_tracker;
-			productReference = D1981D161F7EEEF500644CDA /* mood_tracker.app */;
+			productReference = D1A55F491F8435230090F856 /* mood_tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D1981D0E1F7EEEF500644CDA /* Project object */ = {
+		D1A55F411F8435230090F856 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = projects;
+				ORGANIZATIONNAME = "Make School";
 				TargetAttributes = {
-					D1981D151F7EEEF500644CDA = {
+					D1A55F481F8435230090F856 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = D1981D111F7EEEF500644CDA /* Build configuration list for PBXProject "mood_tracker" */;
+			buildConfigurationList = D1A55F441F8435230090F856 /* Build configuration list for PBXProject "mood_tracker" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,56 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = D1981D0D1F7EEEF500644CDA;
-			productRefGroup = D1981D171F7EEEF500644CDA /* Products */;
+			mainGroup = D1A55F401F8435230090F856;
+			productRefGroup = D1A55F4A1F8435230090F856 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D1981D151F7EEEF500644CDA /* mood_tracker */,
+				D1A55F481F8435230090F856 /* mood_tracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D1981D141F7EEEF500644CDA /* Resources */ = {
+		D1A55F471F8435230090F856 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1981D241F7EEEF500644CDA /* LaunchScreen.storyboard in Resources */,
-				D1981D211F7EEEF500644CDA /* Assets.xcassets in Resources */,
-				D1981D1F1F7EEEF500644CDA /* Main.storyboard in Resources */,
+				D1A55F571F8435240090F856 /* LaunchScreen.storyboard in Resources */,
+				D1A55F541F8435240090F856 /* Assets.xcassets in Resources */,
+				D1A55F521F8435230090F856 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D1981D121F7EEEF500644CDA /* Sources */ = {
+		D1A55F451F8435230090F856 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1981D1C1F7EEEF500644CDA /* ViewController.swift in Sources */,
-				D1981D1A1F7EEEF500644CDA /* AppDelegate.swift in Sources */,
-				D1981D2E1F7EFB4300644CDA /* MoodTableViewController.swift in Sources */,
-				D1981D2C1F7EFA0900644CDA /* FriendsTableViewController.swift in Sources */,
+				D1A55F4F1F8435230090F856 /* ViewController.swift in Sources */,
+				D1A55F4D1F8435230090F856 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D1981D1D1F7EEEF500644CDA /* Main.storyboard */ = {
+		D1A55F501F8435230090F856 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D1981D1E1F7EEEF500644CDA /* Base */,
+				D1A55F511F8435230090F856 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D1981D221F7EEEF500644CDA /* LaunchScreen.storyboard */ = {
+		D1A55F551F8435240090F856 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D1981D231F7EEEF500644CDA /* Base */,
+				D1A55F561F8435240090F856 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -171,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D1981D261F7EEEF500644CDA /* Debug */ = {
+		D1A55F591F8435240090F856 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		D1981D271F7EEEF500644CDA /* Release */ = {
+		D1A55F5A1F8435240090F856 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,60 +270,58 @@
 			};
 			name = Release;
 		};
-		D1981D291F7EEEF500644CDA /* Debug */ = {
+		D1A55F5C1F8435240090F856 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9QJPSH6M7U;
 				INFOPLIST_FILE = mood_tracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.mood-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.mood-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D1981D2A1F7EEEF500644CDA /* Release */ = {
+		D1A55F5D1F8435240090F856 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9QJPSH6M7U;
 				INFOPLIST_FILE = mood_tracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.mood-tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.mood-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D1981D111F7EEEF500644CDA /* Build configuration list for PBXProject "mood_tracker" */ = {
+		D1A55F441F8435230090F856 /* Build configuration list for PBXProject "mood_tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1981D261F7EEEF500644CDA /* Debug */,
-				D1981D271F7EEEF500644CDA /* Release */,
+				D1A55F591F8435240090F856 /* Debug */,
+				D1A55F5A1F8435240090F856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1981D281F7EEEF500644CDA /* Build configuration list for PBXNativeTarget "mood_tracker" */ = {
+		D1A55F5B1F8435240090F856 /* Build configuration list for PBXNativeTarget "mood_tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D1981D291F7EEEF500644CDA /* Debug */,
-				D1981D2A1F7EEEF500644CDA /* Release */,
+				D1A55F5C1F8435240090F856 /* Debug */,
+				D1A55F5D1F8435240090F856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D1981D0E1F7EEEF500644CDA /* Project object */;
+	rootObject = D1A55F411F8435230090F856 /* Project object */;
 }
