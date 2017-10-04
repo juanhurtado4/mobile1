@@ -43,53 +43,94 @@ case .occupied(let person):
  */
 
 class Thing {
-  let name: String
-  
-  init(name: String) {
-    self.name = name
-  }
-}
-
-enum Box<T> {
-  case empty
-  case contains(T)
-}
-
-enum Optional<T> {
-  case none
-  case some(T)
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
 }
 
 
-var emptyBox = Box<String>.empty
-emptyBox = .contains("hello")
-var stringBox = Box<String>.empty
+// Challenge 1
+enum Box {
+    case empty
+    case thing(Thing)
+}
 
+// Challenge 2
+let box = Box.empty
+
+// Challenge 3
 let soccerBall = Thing(name: "Soccer Ball")
-let boxWithSoccerBall = Box.contains(soccerBall)
+let box2 = Box.thing(soccerBall)
+
+let phone = Thing(name: "Phone")
+let box3 = Box.thing(phone)
 
 
-protocol HasName {
-  var name: String {
-    get
-  }
+let box4 = Box.thing(Thing(name: "Chocolate"))
+
+// Challenge 4
+func getBoxItem(item: Box) -> String {
+    switch item {
+    case .empty:
+        return "Box is empty"
+    case .thing(let thing):
+        return thing.name
+        
+    }
 }
 
-func inTheBox(box: Box<HasName>) -> String {
-  switch box {
-  case .empty:
-    return "box is empty"
-  case .contains(let thing):
-    return "box contains something: ] \(thing.name))"
-  }
-}
+// Need help on Challenge 5
+
+//class Thing {
+//  let name: String
+//
+//  init(name: String) {
+//    self.name = name
+//  }
+//}
+
+//enum Box<T> {
+//  case empty
+//  case contains(T)
+//}
+//
+//enum Optional<T> {
+//  case none
+//  case some(T)
+//}
+//
+//
+//var emptyBox = Box<String>.empty
+//emptyBox = .contains("hello")
+//var stringBox = Box<String>.empty
+//
+//let soccerBall = Thing(name: "Soccer Ball")
+//let boxWithSoccerBall = Box.contains(soccerBall)
+//
+//
+//protocol HasName {
+//  var name: String {
+//    get
+//  }
+//}
+//
+//func inTheBox(box: Box<HasName>) -> String {
+//  switch box {
+//  case .empty:
+//    return "box is empty"
+//  case .contains(let thing):
+//    return "box contains something: ] \(thing.name))"
+//  }
+//}
 
 
 
 //inTheBox(box: boxWithSoccerBall)
 //inTheBox(box: emptyBox)
 
-let box = Box.contains("hello")
+//let box = Box.contains("hello")
 //inTheBox(box: box)
 
 
