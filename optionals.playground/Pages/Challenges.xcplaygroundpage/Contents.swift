@@ -17,6 +17,35 @@ class Person {
   }
 }
 
+// Challenge 1
+func myNameIs(person: Person?) -> String {
+    if let personName = person {
+        return "My name is \(personName.name)"
+    }else {
+        return "This is not a valid person object"
+    }
+}
 
+// Challenge 2
+var maybePerson1: Person? = Person(name: "Juan")
 
+// Challenge 3
+var maybePerson2: Person? = nil
 
+// Challenge 4
+print(myNameIs(person: maybePerson1))
+print(myNameIs(person: maybePerson2))
+
+// Challenge 5
+func myNameIs2(person: Person?) -> String {
+    switch person {
+    case .none:
+        return "This is not a valid person object"
+    case .some(let personName):
+        return "My name is \(personName.name)"
+    }
+}
+
+print("--------------------------------------")
+print(myNameIs2(person: maybePerson1))
+print(myNameIs2(person: maybePerson2))
