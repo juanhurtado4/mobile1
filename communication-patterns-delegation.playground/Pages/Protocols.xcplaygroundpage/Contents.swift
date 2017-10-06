@@ -205,103 +205,210 @@ describe(item: Ostrich())
  
  1. a. Create a model of a car, it should have a max speed, number of wheels, doors and model properties.
     b. Generalize the car, create a model for a vehicle which will represent all vehicles, a truck, motocycle & bus are vehicles
- 
- 2.
+
  */
-
- protocol CanMakeNoise {
-    func makeNoise()
- }
- 
- class Elephant {
- 
- }
- 
- class Pig {
- 
- }
- 
- class Cow {
- 
- }
- 
- 
- let elephant = Elephant()
- let pig = Pig()
- let cow = Cow()
- 
- // let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
-
-
-/*:
- 
- 2 a. Uncomment above line and make the code compile. This can be achieved by implementing the `CanMakeNoise` protocol in all the classes above. Think about a noise each class could make and print it to the console using `print`.
- 
- b. Iterate over `arrayOfNoiseMaker` and let each object make their noise
- 
- */
-
-/*:
- 3.
- 
- Take at look at the protocol definition for Equatable by Apple:
- 
- ```
- public protocol Equatable {
- 
-  Returns a Boolean value indicating whether two values are equal.
- 
-  Equality is the inverse of inequality. For any values `a` and `b`,
-  `a == b` implies that `a != b` is `false`.
- 
-  - Parameters:
-    - lhs: A value to compare.
-    - rhs: Another value to compare.
- public static func ==(lhs: Self, rhs: Self) -> Bool
- }
- ```
- 
- Given the Artist struct below, implement the Equatable protocol
- 
- ### Hint
- 
- With Equatable, you define what makes two instances equal. Imagine you have two colored balls.
- What makes them equal? Is it their colors? Their sizes? Its up to you to determine that.
- 
- */
-
-// Used by Artist to determine style of Artist
-enum Style: String {
-    case impressionism
-    case surrealism
-    case cubism
-    case popArt
+// a.
+protocol Car {
+    var maxSpeed: Int {get}
+    var numberOfWheels: Int {get}
+    var numberOfDoors: Int {get set}
+    var modelProperties: String {get set}
+}
+// b.
+@objc protocol Vehicle {
+    var maxSpeed: Int {get}
+    var numberOfWheels: Int {get set}
+    @objc optional var numberOfDoors: Int {get set}
+    var modelProperties: String {get set}
 }
 
-struct Artist {
-    let name: String
-    let style: Style
-    let yearBorn: Int
+class CarSedan: Vehicle {
+    var maxSpeed: Int
+    var numberOfWheels: Int
+    var numberOfDoors: Int
+    var modelProperties: String
+    
+    init(maxSpeed: Int, numberOfWheels: Int, numberOfDoors: Int, modelProperties: String) {
+        self.maxSpeed = maxSpeed
+        self.numberOfWheels = numberOfWheels
+        self.numberOfDoors  = numberOfDoors
+        self.modelProperties = modelProperties
+    }
 }
 
-// Example instances of Artists, use for testing your equatable
-let monet = Artist(name: "monet", style: .impressionism, yearBorn: 1840)
-let dali = Artist(name: "Salvador Dali", style: .surrealism, yearBorn: 1904)
-let andy = Artist(name: "Andy Warhol", style: .popArt, yearBorn: 1928)
+class Truck: Vehicle {
+    var maxSpeed: Int
+    var numberOfWheels: Int
+    var numberOfDoors: Int
+    var modelProperties: String
+    
+    init(maxSpeed: Int, numberOfWheels: Int, numberOfDoors: Int, modelProperties: String) {
+    self.maxSpeed = maxSpeed
+    self.numberOfWheels = numberOfWheels
+    self.numberOfDoors  = numberOfDoors
+    self.modelProperties = modelProperties
+}
+}
+
+class Bus: Vehicle {
+    var maxSpeed: Int = 100
+    var numberOfWheels: Int = 4
+    var numberOfDoors: Int = 2
+    var modelProperties: String
+    
+    init(maxSpeed: Int, numberOfWheels: Int, numberOfDoors: Int, modelProperties: String) {
+    self.maxSpeed = maxSpeed
+    self.numberOfWheels = numberOfWheels
+    self.numberOfDoors  = numberOfDoors
+    self.modelProperties = modelProperties
+}
+    }
+    
+class Motorcycle: Vehicle {
+    var maxSpeed: Int
+    var modelProperties: String
+// var numberOfDoors: Int? = nil
+    var numberOfWheels: Int
+    
+    init(maxSpeed: Int, modelProperties: String) {
+        self.maxSpeed  = maxSpeed
+        self.modelProperties = modelProperties
+        self.numberOfWheels = 2
+        
+        // How to use optional for class motorcycle
+    }
+}
+
+extension Vehicle where Self == Motorcycle {
+    var numberOfWheels: Int {
+        return 2
+    }
+}
 
 
-/*:
- 
- 4. Write an iterator for a 2Dimentional array. Eg. Given [[2,5,9], [0, 4, 2], [6, 8, 3]],
- you should be able to iterate through each element sequentially 2,5,9,0,4,2,6,8,3.
- 
- ### Hint
- 
- There are some protocols you can leverage in the collection data types to help guide you.
- 
- 
-*/
+var ninja = Motorcycle(maxSpeed: 230, modelProperties: "ninja")
+ninja.numberOfWheels
 
 
 
-//: [Next](@next)
+
+
+
+
+
+
+
+
+//// 2. a.
+// protocol CanMakeNoise {
+//    func makeNoise()
+// }
+//
+//class Elephant: CanMakeNoise {
+//    let noiseSound: String
+//
+//    init(sound: String) {
+//        self.noiseSound = noiseSound
+//    }
+//
+//    func makeNoise() {
+//        print("Some Elephant noise")
+//    }
+// }
+//
+//class Pig: CanMakeNoise {
+//    func makeNoise() {
+//        print("Oink Oink")
+//    }
+// }
+//
+//class Cow: CanMakeNoise {
+//    func makeNoise() {
+//        print("Moooo")
+//    }
+// }
+//
+//
+// let elephant = Elephant()
+// let pig = Pig()
+// let cow = Cow()
+//
+//// 2. b.
+//  let arrayOfNoiseMaker: [CanMakeNoise] = [elephant, pig, cow]
+//for noise in arrayOfNoiseMaker {
+//    print(noise.makeNoise())
+//}
+//
+///*:
+//
+// 2 a. Uncomment above line and make the code compile. This can be achieved by implementing the `CanMakeNoise` protocol in all the classes above. Think about a noise each class could make and print it to the console using `print`.
+//
+// b. Iterate over `arrayOfNoiseMaker` and let each object make their noise
+//
+// */
+//
+///*:
+// 3.
+//
+// Take at look at the protocol definition for Equatable by Apple:
+//
+// ```
+// public protocol Equatable {
+//
+//  Returns a Boolean value indicating whether two values are equal.
+//
+//  Equality is the inverse of inequality. For any values `a` and `b`,
+//  `a == b` implies that `a != b` is `false`.
+//
+//  - Parameters:
+//    - lhs: A value to compare.
+//    - rhs: Another value to compare.
+// public static func ==(lhs: Self, rhs: Self) -> Bool
+// }
+// ```
+//
+// Given the Artist struct below, implement the Equatable protocol
+//
+// ### Hint
+//
+// With Equatable, you define what makes two instances equal. Imagine you have two colored balls.
+// What makes them equal? Is it their colors? Their sizes? Its up to you to determine that.
+//
+// */
+//
+//// Used by Artist to determine style of Artist
+//enum Style: String {
+//    case impressionism
+//    case surrealism
+//    case cubism
+//    case popArt
+//}
+//
+//struct Artist {
+//    let name: String
+//    let style: Style
+//    let yearBorn: Int
+//}
+//
+//// Example instances of Artists, use for testing your equatable
+//let monet = Artist(name: "monet", style: .impressionism, yearBorn: 1840)
+//let dali = Artist(name: "Salvador Dali", style: .surrealism, yearBorn: 1904)
+//let andy = Artist(name: "Andy Warhol", style: .popArt, yearBorn: 1928)
+//
+//
+///*:
+//
+// 4. Write an iterator for a 2Dimentional array. Eg. Given [[2,5,9], [0, 4, 2], [6, 8, 3]],
+// you should be able to iterate through each element sequentially 2,5,9,0,4,2,6,8,3.
+//
+// ### Hint
+//
+// There are some protocols you can leverage in the collection data types to help guide you.
+//
+//
+//*/
+//
+//
+//
+////: [Next](@next)
+
