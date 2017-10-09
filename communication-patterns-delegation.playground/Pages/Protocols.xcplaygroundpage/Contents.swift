@@ -217,7 +217,7 @@ protocol Car {
 // b.
 @objc protocol Vehicle {
     var maxSpeed: Int {get}
-    var numberOfWheels: Int {get set}
+    @objc optional var numberOfWheels: Int {get set}
     @objc optional var numberOfDoors: Int {get set}
     var modelProperties: String {get set}
 }
@@ -267,15 +267,10 @@ class Bus: Vehicle {
 class Motorcycle: Vehicle {
     var maxSpeed: Int
     var modelProperties: String
-// var numberOfDoors: Int? = nil
-    var numberOfWheels: Int
     
     init(maxSpeed: Int, modelProperties: String) {
         self.maxSpeed  = maxSpeed
         self.modelProperties = modelProperties
-        self.numberOfWheels = 2
-        
-        // How to use optional for class motorcycle
     }
 }
 
@@ -300,45 +295,64 @@ ninja.numberOfWheels
 
 
 //// 2. a.
-// protocol CanMakeNoise {
-//    func makeNoise()
-// }
-//
-//class Elephant: CanMakeNoise {
-//    let noiseSound: String
-//
-//    init(sound: String) {
-//        self.noiseSound = noiseSound
-//    }
-//
-//    func makeNoise() {
-//        print("Some Elephant noise")
-//    }
-// }
-//
-//class Pig: CanMakeNoise {
-//    func makeNoise() {
-//        print("Oink Oink")
-//    }
-// }
-//
-//class Cow: CanMakeNoise {
-//    func makeNoise() {
-//        print("Moooo")
-//    }
-// }
-//
-//
-// let elephant = Elephant()
-// let pig = Pig()
-// let cow = Cow()
-//
+ protocol CanMakeNoise {
+    func makeNoise() -> String
+ }
+
+class Elephant: CanMakeNoise {
+    let age: Int
+
+    init(age: Int) {
+        self.age = age
+    }
+
+    func makeNoise() -> String{
+        return"TRUMPED!!"
+    }
+ }
+
+class Pig: CanMakeNoise {
+    let age: Int
+    
+    init(age: Int){
+        self.age = age
+    }
+    
+    func makeNoise() -> String{
+        return "OINK OINK!"
+    }
+ }
+
+class Cow: CanMakeNoise {
+    let age: Int
+    
+    init(age: Int){
+        self.age = age
+    }
+    func makeNoise() -> String{
+        return "MOOO!"
+    }
+}
+
+
+let elephant = Elephant(age: 10)
+elephant.age
+elephant.makeNoise()
+
+let pig = Pig(age: 11)
+pig.age
+pig.makeNoise()
+
+let cow = Cow(age: 5)
+cow.age
+cow.makeNoise()
+
 //// 2. b.
-//  let arrayOfNoiseMaker: [CanMakeNoise] = [elephant, pig, cow]
-//for noise in arrayOfNoiseMaker {
-//    print(noise.makeNoise())
-//}
-//
+let arrayOfNoiseMaker: [CanMakeNoise] = [elephant, pig, cow]
+for noise in arrayOfNoiseMaker {
+    print(noise.makeNoise())
+}
+
 ///*:
 //
 // 2 a. Uncomment above line and make the code compile. This can be achieved by implementing the `CanMakeNoise` protocol in all the classes above. Think about a noise each class could make and print it to the console using `print`.
@@ -377,23 +391,31 @@ ninja.numberOfWheels
 // */
 //
 //// Used by Artist to determine style of Artist
-//enum Style: String {
-//    case impressionism
-//    case surrealism
-//    case cubism
-//    case popArt
-//}
+protocol Equatable {
+    func isEqual(to artist: Artist) -> Bool
+}
+enum Style: String {
+    case impressionism
+    case surrealism
+    case cubism
+    case popArt
+}
 //
-//struct Artist {
-//    let name: String
-//    let style: Style
-//    let yearBorn: Int
-//}
+struct Artist: Equatable {
+    let name: String
+    let style: Style
+    let yearBorn: Int
+    
+    func isEqual(to artist: Artist) -> Bool {
+        return artist.style == style ? true : false
+    }
+}
 //
 //// Example instances of Artists, use for testing your equatable
-//let monet = Artist(name: "monet", style: .impressionism, yearBorn: 1840)
-//let dali = Artist(name: "Salvador Dali", style: .surrealism, yearBorn: 1904)
-//let andy = Artist(name: "Andy Warhol", style: .popArt, yearBorn: 1928)
+let monet = Artist(name: "monet", style: .impressionism, yearBorn: 1840)
+let dali = Artist(name: "Salvador Dali", style: .surrealism, yearBorn: 1904)
+let andy = Artist(name: "Andy Warhol", style: .popArt, yearBorn: 1928)
+monet.isEqual(to: monet)
 //
 //
 ///*:
@@ -407,7 +429,12 @@ ninja.numberOfWheels
 //
 //
 //*/
-//
+let arr = [[2,5,9], [0, 4, 2], [6, 8, 3]]
+for nestedArr in arr {
+    for number in nestedArr {
+        print(number)
+    }
+}
 //
 //
 ////: [Next](@next)
