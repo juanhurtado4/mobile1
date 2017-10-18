@@ -19,13 +19,13 @@ import Foundation
 //    let name: String
 //    let mood: String
 //}
-class Friend {
-    var name: String
-    var mood: String
+struct Friend {
+    var name: String = ""
+    var mood: String = ""
     
-    init(name: String, mood: String) {
-        self.name = name
-        self.mood = mood
-    }
+//    init(name: String, mood: String) {
+//        self.name = name
+//        self.mood = mood
+//    }
 }
 

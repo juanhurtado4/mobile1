@@ -66,6 +66,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TO3-nb-yFa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5XO-Dg-Qtq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,13 +84,12 @@
                     <navigationItem key="navigationItem" title="Moodr" id="si5-Cj-a9k">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1jP-Gy-SWt">
                             <connections>
-                                <action selector="addPressed:" destination="BYZ-38-t0r" id="5Q0-Tu-TVs"/>
+                                <segue destination="ray-uP-7KI" kind="show" identifier="addMood" id="VZY-oU-7Kd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="moodTableView" destination="2ey-QO-i9X" id="AYb-5V-FMN"/>
-                        <segue destination="ray-uP-7KI" kind="show" identifier="moodSegue" id="JtO-e3-tAH"/>
+                        <outlet property="tableView" destination="2ey-QO-i9X" id="J8o-qx-7vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,7 +99,7 @@
         <!--MoodViewController-->
         <scene sceneID="Fcs-yb-apo">
             <objects>
-                <viewController id="ray-uP-7KI" userLabel="MoodViewController" customClass="MoodViewController" customModule="mood_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoodVC" id="ray-uP-7KI" userLabel="MoodViewController" customClass="MoodViewController" customModule="mood_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="816-az-21f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

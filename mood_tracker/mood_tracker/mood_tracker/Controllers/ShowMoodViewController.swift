@@ -8,26 +8,78 @@
 
 import UIKit
 
-protocol ShowRowDelegate: class {
-    func sendRow(friend: Friend, row: Int)
-}
+//protocol ShowRowDelegate: class {
+//    func sendRow(friend: Friend, row: Int)
+//}
 
 // , UITableViewDataSource, UITableViewDelegate,
-class ShowMoodTableViewController: UITableViewController, MoodViewControllerDelegate {
+class ShowMoodViewController: UIViewController,  MoodViewControllerDelegate{
+    func addMood(friend: Friend) {
+        friends.append(friend)
+    }
+    
     
     // MARK: Properties
-    @IBOutlet weak var moodTableView: UITableView!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     var friends = [Friend]() {
         didSet {
-            moodTableView.reloadData()
+            tableView.reloadData()
         }
     }
     
-    // Delegate
-    weak var delegate: ShowRowDelegate?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        //        moodTableView.delegate = self
+        //        moodTableView.dataSource = self
+        
+    }
     
-    // Datasource Eliel's Demo
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "addMood" {
+            let moodViewController = segue.destination as! MoodViewController
+            moodViewController.delegate = self
+            //print("tapped")
+        }
+    }
+}
+
+extension ShowMoodViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friends.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "showMoodTableViewCell", for: indexPath) as! ShowMoodTableViewCell
+        
+        let row = indexPath.row
+        let element = friends[row]
+        
+        cell.nameTextField.text = element.name
+        cell.moodLabel.text = element.mood
+        
+        return cell
+    }
+    
+//    @IBAction func addPressed(_ sender: Any) {
+//        performSegue(withIdentifier: "moodSegue", sender: nil)
+    //    }
+    
+}
+
+//@IBAction func setDelegate(_ sender: Any) {
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//    let moodVC = storyboard.instantiateViewController(withIdentifier: "MoodVC") as! MoodViewController
+//    moodVC.delegate = self
+//}
+
+
+
+
+// Datasource Eliel's Demo
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return friends.count
 //    }
@@ -40,62 +92,14 @@ class ShowMoodTableViewController: UITableViewController, MoodViewControllerDele
 //
 //        return cell
 //    }
-    
-  
-    // Conformed to the MoodViewControllerDelegate
-    func editMood(friend: Friend, row: Int) {
-        self.friends[row].name = friend.name
-        self.friends[row].name = friend.mood
-        moodTableView.reloadData()
-    }
-    
-    // Conforms to the MoodViewControllerDelegate
-    func addMood(friend: Friend) {
-        friends.append(friend)
-    }
-    
-    
+
+
+// Conformed to the MoodViewControllerDelegate
+//        moodTableView.reloadData()
+
+// Conforms to the MoodViewControllerDelegate
+
+
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        performSegue(withIdentifier: "moodSegue", sender: nil)
 //    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "showMoodTableViewCell", for: indexPath) as! ShowMoodTableViewController
-        cell.nameTextField.text = friends[indexPath.row].name
-        cell.moodLabel.text = friends[indexPath].mood
-        
-        return cell
-    }
-    
-//    @IBAction func addPressed(_ sender: Any) {
-//        performSegue(withIdentifier: "moodSegue", sender: nil)
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        moodTableView.delegate = self
-//        moodTableView.dataSource = self
-        
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if identifier == "moodSegue" {
-                let moodViewController = segue.destination as! MoodViewController
-                moodViewController.delegate = self
-                
-                let indextPath = moodTableView.indexPathForSelectedRow?.row
-            }
-        }
-    }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
-}
-

@@ -10,11 +10,10 @@ import UIKit
 
 protocol MoodViewControllerDelegate: class {
     func addMood(friend: Friend)
-    func editMood(friend: Friend, row: Int)
 }
 
 
-class MoodViewController: UIViewController,  ShowRowDelegate {
+class MoodViewController: UIViewController {
     // MARK: DELEGATE
     weak var delegate: MoodViewControllerDelegate?
     
@@ -39,43 +38,57 @@ class MoodViewController: UIViewController,  ShowRowDelegate {
         }
     }
     
-    // Conforms to delegation
-    func sendRow(friend: Friend, row: Int) {
-        self.friend = friend
-        self.row = row
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.friend != nil  {
-            chooseEmoji()
-        }
+//        if self.friend != nil  {
+//            chooseEmoji()
+//        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func selectionButton(_ sender: Any) {
         
-        if self.friend == nil {
-            guard let friendsName = nameTextField.text, let friendsMood = pickMood.titleForSegment(at: pickMood.selectedSegmentIndex) else {return}
-            
-            let name = friendsName
-            let mood = friendsMood
-            
-            let friend = Friend(name: name, mood: mood)
-            
-            delegate?.addMood(friend: friend)
-        } else {
-            guard let friendsName = nameTextField.text, let friendsMood = pickMood.titleForSegment(at: pickMood.selectedSegmentIndex) else {return}
-            
-            self.friend?.name = friendsName
-            self.friend?.mood = friendsMood
-            
-            delegate?.editMood(friend: self.friend!, row: self.row!)
+//        if self.friend == nil {
+//            guard let friendsName = nameTextField.text, let friendsMood = pickMood.titleForSegment(at: pickMood.selectedSegmentIndex) else {return}
+//
+//            let name = friendsName
+//            let mood = friendsMood
+//
+//            let friend = Friend(name: name, mood: mood)
+//
+//            delegate?.addMood(friend: friend)
+//        } else {
+//            guard let friendsName = nameTextField.text, let friendsMood = pickMood.titleForSegment(at: pickMood.selectedSegmentIndex) else {return}
+//
+//            self.friend?.name = friendsName
+//            self.friend?.mood = friendsMood
+//
+//            delegate?.editMood(friend: self.friend!, row: self.row!)
+//        }
+        
+        var friend = Friend()
+        friend.name = nameTextField.text ?? ""
+        var mood = ""
+        
+        switch pickMood.selectedSegmentIndex {
+        case 0:
+           mood =  "😃"
+        case 1:
+           mood =  "😡"
+        case 2:
+           mood =  "😑"
+        default:
+            break
         }
+        
+        friend.mood = mood
+        
+         delegate?.addMood(friend: friend)
     }
     
- 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
