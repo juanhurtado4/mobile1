@@ -58,11 +58,11 @@
 			children = (
 				05B643361F8422AA00B0B2B4 /* AppDelegate.swift */,
 				05B643381F8422AA00B0B2B4 /* ViewController.swift */,
-				05B643481F8422C500B0B2B4 /* PresentableAlertView.swift */,
 				05B6433A1F8422AA00B0B2B4 /* Main.storyboard */,
 				05B6433D1F8422AA00B0B2B4 /* Assets.xcassets */,
 				05B6433F1F8422AA00B0B2B4 /* LaunchScreen.storyboard */,
 				05B643421F8422AA00B0B2B4 /* Info.plist */,
+				05B643481F8422C500B0B2B4 /* PresentableAlertView.swift */,
 			);
 			path = ProtocolPresentable;
 			sourceTree = "<group>";
