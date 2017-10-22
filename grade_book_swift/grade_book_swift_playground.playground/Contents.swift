@@ -16,15 +16,49 @@ class Student {
             /*
              Function adds new assignment to the dictionary of assignments
              Returns nil
-             */
+            */
             self.assignment[assignment] = grade
         }
         
-        func get_assignment() -> [String: Int] {
+        func getAssignment() -> [String: Int] {
             /*
              Function returns a dictionary of assignments
-             */
-            // TODO: Research how to return key value pairs in a dictionary
+            */
             return self.assignment
         }
+    
+    func deleteAssignment(assignment: String) {
+        /*
+         Function deletes assignment from dictionary of student assignments
+         Returns nil
+        */
+        self.assignment.removeValue(forKey: assignment)
+    }
+    
+    func updateAssignment(newAssignmnet: String, oldAssignment: String, grade score: Int) {
+        /*
+         Function updates assignment
+         Returns nil
+        */
+        self.deleteAssignment(assignment: oldAssignment)
+        self.addAssignment(assignment: newAssignmnet, grade: score)
+    }
+    
+    func getGpa() -> Int {
+        /*
+         Function returns the avg grade for all the assignments
+        */
+        var result = 0
+        for grade in self.assignment.values {
+            result += grade
+        }
+        return result / self.assignment.count
+    }
 }
+
+var juan = Student(name: "juan", studentId: 1)
+juan.getAssignment()
+juan.assignment["grade_book"] = 10
+juan.assignment["simmulation"] = 10
+juan.assignment["moodTracker"] = 10
+juan.getGpa()
