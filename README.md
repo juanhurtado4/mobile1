@@ -60,7 +60,7 @@ Minimalistic calculator with a beautiful UI that allows you to compute a tip bas
 
 <br>
 
-#### Tip Calculator App
+#### Hustle Mode On App
 
 <br>
 <br>
