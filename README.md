@@ -5,7 +5,6 @@
 ## Class Overview
 Fundamental to intermediate course on Swift, Xcode and IOS development.
 
-___
 ## Lessons
 * Delegation
 * Protocols
