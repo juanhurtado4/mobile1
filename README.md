@@ -32,6 +32,7 @@ Used delegation to pass user's guess from one table view controller to another
 
 <br>
 <br>
+
 #### Mood Tracker App
 
 <br>
@@ -64,7 +65,7 @@ Minimalistic calculator with a beautiful UI that allows you to compute a tip bas
 <br>
 <br>
 
-![Grind Mode](https://media.giphy.com/media/3o6fIRB1drtvLlytEY/giphy.gif)
+![Grind Mode](grind_mode_gif.gif)
 
 <br>
 <br>
