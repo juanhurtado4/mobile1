@@ -43,7 +43,9 @@ Minimalistic calculator with a beautiful UI that allows you to compute a tip bas
 #### Tip Calculator App
 <br>
 <br>
+
 ![Grind Mode](https://media.giphy.com/media/3o6fIRB1drtvLlytEY/giphy.gif)
+
 <br>
 <br>
 Simple animation app built to learn how to use view controllers, segues, IBActions, IBOutlets and animations in Swift / Xcode.
