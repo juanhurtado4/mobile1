@@ -23,7 +23,7 @@ ___
 
 <br>
 
-![Guess Pokemon](pokemon_gif.gif)
+![Guess Pokemon](pokemon_background.gif)
 
 <br>
 <br>
