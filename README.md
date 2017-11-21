@@ -37,7 +37,7 @@ Used delegation to pass user's guess from one table view controller to another
 
 <br>
 
-![Mood Tracker](mood_tracker_gify.gif)
+![Mood Tracker](mood_tracker_background.gif)
 
 <br>
 <br>
@@ -51,7 +51,7 @@ Used delegation to pass name and emoji selection from one table view controller 
 
 <br>
 
-![Tip Calculator](tip_calculator_gif.gif)
+![Tip Calculator](tip_calculator_background.gif)
 
 <br>
 <br>
@@ -65,7 +65,7 @@ Minimalistic calculator with a beautiful UI that allows you to compute a tip bas
 <br>
 <br>
 
-![Grind Mode](grind_mode_gif.gif)
+![Grind Mode](hustle_mode_background.gif)
 
 <br>
 <br>
